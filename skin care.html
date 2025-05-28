@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page with Wishlist</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="pp3.css">
+    <style>
+        .wishlist-icon {
+            font-size: 1.2em;
+            position: absolute;
+            bottom: 20px;
+            right: 10px;
+            color: red;
+        }
+        .card {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="logo1.png" width="100px" height="40px"></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                   <li class="nav-item">
+                        <a class="nav-link active" href="cat.html">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="brand.html">Brands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="offer.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutorial.html">Tutorial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="wishlist.html">Wishlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="blinking" class="nav-link" href="loginsignup1.html">login/signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4"> Skin Care Products</h1>
+        <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="s-1.png" class="card-img-top" alt="Hydrating Serum">
+                    <a href="#" onclick="addToWishlist('Hydrating Serum', 24.99)"><i class="far fa-heart wishlist-icon" title="Add to Wishlist"></i></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Hydrating Serum</h5>
+                        <p class="card-text">Revitalize your skin with this ultra-hydrating serum.</p>
+                        <p class="card-text"><strong>Price: $24.99</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Hydrating Serum', 24.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="s-2.png" class="card-img-top" alt="Moisturizing Cream">
+                    <a href="#" onclick="addToWishlist('Moisturizing Cream', 19.99)"><i class="far fa-heart wishlist-icon" title="Add to Wishlist"></i></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Moisturizing Cream</h5>
+                        <p class="card-text">Nourish and hydrate your skin.</p>
+                        <p class="card-text"><strong>Price: $19.99</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Moisturizing Cream', 19.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="s-3.png" class="card-img-top" alt="face wash">
+                    <a href="#" onclick="addToWishlist('Face wash', 14.99)"><i class="far fa-heart wishlist-icon" title="Add to Wishlist"></i></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Face wash</h5>
+                        <p class="card-text">Gently removes dead skin cells.</p>
+                        <p class="card-text"><strong>Price: $14.99</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Face wash', 14.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="s-4.png" class="card-img-top" alt="Suncream">
+                    <a href="#" onclick="addToWishlist('Suncream', 29.99)"><i class="far fa-heart wishlist-icon" title="Add to Wishlist"></i></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Suncream</h5>
+                        <p class="card-text">Repair and rejuvenate your skin in sun.</p>
+                        <p class="card-text"><strong>Price: $29.99</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Suncream', 29.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="s-5.png" class="card-img-top" alt="Face Mask">
+                    <a href="#" onclick="addToWishlist('Face Mask', 15.99)"><i class="far fa-heart wishlist-icon" title="Add to Wishlist"></i></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Face Mask</h5>
+                        <p class="card-text">Revitalize your skin with our soothing face mask.</p>
+                        <p class="card-text"><strong>Price: $15.99</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Face Mask', 15.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="s-6.png" class="card-img-top" alt="Lip Balm">
+                    <a href="#" onclick="addToWishlist('Lip Balm', 8.99)"><i class="far fa-heart wishlist-icon" title="Add to Wishlist"></i></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Lip Balm</h5>
+                        <p class="card-text">Keep your lips moisturized and soft.</p>
+                        <p class="card-text"><strong>Price: $8.99</strong></p>
+                        <button class="btn btn-primary" onclick="addToCart('Lip Balm', 8.99)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <footer class="footer mt-5">
+        <div class="container">
+            <div class="footer-content">
+                <div class="left-side">
+                    <a href="about.html" class="text-muted" aria-label="About Us">
+                        <i class="bi bi-info-circle"></i> About Us
+                    </a>
+                </div>
+                <div class="connect-with-us">
+                    <h5>Connect with Us</h5>
+                      <a href="mailto:gsowmiya622@example.com" aria-label="Email">
+                    <i class="bi bi-envelope-fill"></i> Email
+                </a>
+                <a href="https://www.instagram.com/sowmi_623" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                    <a href="https://wa.me/9003424087?text=Hello!%20I%20would%20like%20to%20know%20more%20about..." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+                </div>
+                <div class="right-side text-md-end text-center">
+                     <a href="javascript:void(0);" onclick="openCustomerCare()" aria-label="Customer Care">
+        <i class="bi bi-headset"></i> Customer Care
+    </a>
+                </div>
+            </div>
+            <div class="copyright text-center mt-3">
+                <span class="text-muted">© 2024 Beauty Box. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to add item to cart
+        function addToCart(productName, productPrice) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                alert(`${productName} is already in your cart!`);
+                return; // Exit the function if product already exists
+            }
+
+            cart.push({ name: productName, price: productPrice, quantity: 1 });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} has been added to your cart!`);
+        }
+
+        // Function to add item to wishlist
+        function addToWishlist(productName, productPrice) {
+            const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+            if (wishlist.some(item => item.name === productName)) {
+                alert(`${productName} is already in your wishlist!`);
+                return; // Exit the function if product already exists
+            }
+
+            wishlist.push({ name: productName, price: productPrice });
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert(`${productName} has been added to your wishlist!`);
+        }
+         
+
+        // Customer Care Function
+        function openCustomerCare() {
+            window.open('customer care.html', 'customerCareWindow', 'width=900,height=600');
+        }
+
+        // Highlight active navigation link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+
+        // Clear login name when loading a new browser
+        window.addEventListener('beforeunload', function() {
+            localStorage.removeItem('userName'); // Clear the username when navigating away
+        });
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

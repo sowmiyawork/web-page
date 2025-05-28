@@ -1,0 +1,57 @@
+.col-md-4 {
+    padding: 45px; /* Adjust padding as needed to increase or decrease spacing */
+}
+.container {
+    width: 1600px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+}
+
+.wishlist-icon {
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust size as needed */
+    position: absolute;
+    top: 290px; /* Adjust position from the top */
+    left: 140px; /* Adjust position from the right */
+    color: red; /* Default color for the heart icon */
+}
+
+.card {
+    position: relative;
+    overflow: hidden; /* Ensure the wishlist icon stays within the card */
+}
+
+.product-image {
+    width: 350px; /* Set width for square image */
+    height: 250px; /* Set height to match width for square */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between; /* Align buttons on either side */
+    margin-top: 1rem; /* Space above buttons */
+}
+
+.rating {
+    color: #FFD700; /* Gold color for stars */
+}
+
+.rating i {
+    margin-right: 5px; /* Space between stars */
+}
+.price-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem; /* Adjusts space above the container */
+}
+
+.price {
+    font-size: 1rem;
+    margin: 0; /* Remove margin to better align with button */
+}
+
+.add-to-cart-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
